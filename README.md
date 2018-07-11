@@ -103,6 +103,8 @@ Click the image below if you have a bitcoin app installed, or use it as a QR cod
 
 - [Electron](https://electronjs.org/)
 
+- [Web Bluetooth](https://github.com/WebBluetoothCG/web-bluetooth)
+
 - [Hyperapp](https://github.com/hyperapp/hyperapp)
 
 - [Xel Toolkit](https://xel-toolkit.org/)
