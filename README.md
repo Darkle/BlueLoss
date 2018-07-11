@@ -110,7 +110,6 @@ Click the image below if you have a bitcoin app installed, or use it as a QR cod
 - [Xel Toolkit](https://xel-toolkit.org/)
 
 
-[![Known Vulnerabilities](https://snyk.io/test/github/darkle/blueloss/badge.svg?targetFile=package.json)](https://snyk.io/test/github/darkle/blueloss?targetFile=package.json)
 
 
 
@@ -226,9 +225,10 @@ Click the image below if you have a bitcoin app installed, or use it as a QR cod
 
 - [node-systray](https://github.com/zaaack/node-systray)
 
+- [BlueZ](http://www.bluez.org/)
+
 - [Hyperapp](https://github.com/hyperapp/hyperapp)
 
 - [Express](https://expressjs.com/)
 
 
-[![Known Vulnerabilities](https://snyk.io/test/github/darkle/blueloss/badge.svg?targetFile=package.json)](https://snyk.io/test/github/darkle/blueloss?targetFile=package.json)
