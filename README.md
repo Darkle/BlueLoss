@@ -65,7 +65,7 @@ The following settings are configurable in the BlueLoss settings window:
 
 - **Tray Icon Color** (default: blue): You can change the system tray (or menu bar) icon color to either white or blue.
 
-- **Time To Lock** (default: 3 minutes): This determines how long BlueLoss should wait before locking the computer after the device it's looking for on the network has been lost.
+- **Time To Lock** (default: 3 minutes): This determines how many minutes BlueLoss should wait before locking the computer after a device it's looking for has been lost. If a device is found before the time to lock elapses, the computer is not locked.
 
 - **Report Errors** (default: true): This will report errors to [Rollbar.com](https://rollbar.com). This helps development of the app.
 
@@ -183,7 +183,7 @@ The following settings are configurable in the BlueLoss settings window:
 
 - **Enable/Disable BlueLoss** (default: enabled): You can enable/disable BlueLoss from either the system tray or the status window (see screenshot above).
 
-- **Time To Lock** (default: 2 minutes): This determines how many minutes BlueLoss should wait before locking the computer after a device it's looking for on the network has been lost.
+- **Time To Lock** (default: 2 minutes): This determines how many minutes BlueLoss should wait before locking the computer after a device it's looking for has been lost. If a device is found before the time to lock elapses, the computer is not locked.
 
 - **Scan Interval** (default: 30 seconds): This determines the interval (in seconds) between scans for nearby Bluetooth devices.
 
