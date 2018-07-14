@@ -51,9 +51,9 @@ To open the BlueLoss settings/status window Double clicking on the system tray i
 
 #### Adding A Device:
 
-With the BlueLoss settings/status window open, you can now add a device that BlueLoss is supposed to look for in the scan. Note: it may take about 20 seconds for devices to show up.
+With the BlueLoss settings/status window open, you can now add a device that BlueLoss is supposed to look for in the scan. Note: it takes about a minute for a scan to complete, so you will need to wait that long for devices to show up when first opening the status window.
 
-BlueLoss scans for discoverable Bluetooth devices once every 20 seconds. If the device you have added to look for is not found, and enough time has passed since it was last seen on the network, it will lock the computer BlueLoss is running on. The amount of time passed that it checks for is configurable in the settings.
+When BlueLoss scans for devices, .................................If the device you have added to look for is not found, and enough time has passed since it was last seen on the network, it will lock the computer BlueLoss is running on. The amount of time passed that it checks for is configurable in the settings.
 
 #### Settings:
 
