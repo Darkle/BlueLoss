@@ -1,0 +1,23 @@
+{
+  "name": "blueloss",
+  "version": "1.0.0",
+  "description": "Windows:===================================================================================================\r =========================================================================================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darkle/BlueLoss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darkle/BlueLoss/issues"
+  },
+  "homepage": "https://github.com/Darkle/BlueLoss#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "eslint": "^5.3.0"
+  }
+}
