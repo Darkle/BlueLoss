@@ -26,6 +26,9 @@ img{
 code{
   word-break: break-all;
 }
+a{
+  word-break: break-all;
+}
 
 #header {
   height: 64px;
