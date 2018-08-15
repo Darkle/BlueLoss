@@ -22,11 +22,17 @@
     }
   </style>
 </head>
-
 <body>
-
-  <div id="sidebar">
-    <div id="navigation">
+  <header id="header">
+    <div id="logo">
+      <div id="headerIcon">
+        <img src="icons/BlueLoss-blue.svg" />
+      </div>
+      <div id="headerText">BlueLoss</div>
+    </div>
+  </header>
+  <div id="mainWrapper">
+    <div id="sidebar">
       <a id="homeTab" href="/">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <path d="M0-.17h48v48h-48z" fill="none" />
@@ -64,16 +70,6 @@
         <div class="tabText">Android App</div>
       </a>
     </div>
-  </div>
-  <div id="mainWrapper">
-    <header id="header">
-      <div id="logo">
-        <div id="headerIcon">
-          <img src="icons/BlueLoss-blue.svg" />
-        </div>
-        <div id="headerText">BlueLoss</div>
-      </div>
-    </header>
     <main>
 
       <h1>BlueLoss Android App</h1>
@@ -88,122 +84,56 @@
       </ul>
 
       <h2>Screenshots:</h2>
-      <img src="images/BlueLoss-Status-Linux.png" alt="BlueLoss status window">
-      <img src="images/BlueLoss-Settings-Linux.png" alt="BlueLoss status window">
+      <img class="androidScreenshots" src="images/BlueLoss-Android-App-Start-Activity.png" alt="BlueLoss status window">
+      <img class="androidScreenshots"src="images/BlueLoss-Android-App-Networks-Activity.png" alt="BlueLoss status window">
 
       <h2>How To Use:</h2>
 
-      <p>When you run BlueLoss, it sits in your system tray and searches for discoverable Bluetooth devices.</p>
+      <p>Opening the app will start the BlueLoss service on your device. After this, the service will continue to run in the background including after rebooting your device.</p>
 
-      <h4>System Tray Options:
-        </h3>
+      <h3>Main View Settings:</h3>
+      <p>The following settings are configurable in the BlueLoss settings window:</p>
+      <ul>
+        <li>
+          <p><strong>Enable BlueLoss</strong> (default: enabled) </p>
+        </li>
+        <li>
+          <p><strong>Force always discoverable</strong> (default: disabled): Only use this in testing. This setting forces your device to be discoverable via Bluetooth regardless of whether it is connected to a trusted wifi network.</p>
+        </li>
+        <li>
+          <p><strong>Log errors to bugsnag.com</strong> (default: enabled): This setting enables logging any app crashes to <a href="https://bugsnag.com">bugsnag.com</a>. This helps development of the app.</p>
+        </li>
+      </ul>
 
-        <ul>
-          <li>
-            <p><strong>Open BlueLoss Settings</strong>: This opens the settings/status window</p>
-          </li>
-          <li>
-            <p><strong>Disable BlueLoss</strong></p>
-          </li>
-          <li>
-            <p><strong>Toggle Tray Icon Color</strong>: Toggles the BlueLoss system tray icon color between blue or white</p>
-          </li>
-          <li>
-            <p><strong>Open Logs</strong>: This will open the folder where the BlueLoss logs are written to</p>
-          </li>
-          <li>
-            <p><strong>Quit BlueLoss</strong></p>
-          </li>
-        </ul>
+      <h3>Networks View:</h3>
 
-        <h3>Adding A Device:</h3>
+      <p>On this view you can add and remove networks.</p>
+      <p>If you have already saved the current network you are connected to, it will display in this list with a blue wifi icon on the left.</p>
 
-        <p>With the BlueLoss settings/status window open, you can now add a device that BlueLoss is supposed to look for in
-          the scan.</p>
+      <h3>How It Works:</h3>
 
-        <p>On Linux, BlueLoss scans for discoverable Bluetooth devices once every 30 seconds by default. If the device you
-          have added to look for is not found (and enough time has passed since it was last seen), it will lock the computer
-          BlueLoss is running on. Both the scan interval and the interval between when a device is lost and the computer is
-          locked is configurable in the settings.</p>
+      <p>The app runs a service on your device. This service polls network information once every 5 seconds. If you are currently connected to a network you have saved in the app, the BlueLoss service will set your device to be discoverable via Bluetooth.</p>
 
-        <h3>Settings:</h3>
-        <p>The following settings are configurable in the BlueLoss settings window:</p>
-        <ul>
-          <li>
-            <p><strong>Enable/Disable BlueLoss</strong> (default: enabled): You can enable/disable BlueLoss from either the
-              system tray or the status window (see screenshot above).</p>
-          </li>
-          <li>
-            <p><strong>Time To Lock</strong> (default: 2 minutes): This determines how many minutes BlueLoss should wait before
-              locking the computer after a device it's looking for has been lost. If a device is found before the time to lock
-              elapses, the computer is not locked.</p>
-          </li>
-          <li>
-            <p><strong>Scan Interval</strong> (default: 30 seconds): This determines the interval (in seconds) between scans
-              for nearby Bluetooth devices.</p>
-          </li>
-          <li>
-            <p><strong>Run On System Startup</strong> (default: true) Note: this doesn't work properly for the AppImage - you
-              will need to add it to your system's autorun manually if you are running the AppImage.</p>
-          </li>
-          <li>
-            <p><strong>Error Reporting</strong> (default: true): Any errors generated by BlueLoss will be sent to <a href="https://rollbar.com"
-                rel="nofollow">Rollbar.com</a>. This helps development of the app.</p>
-          </li>
-          <li>
-            <p><strong>Verbose Logging</strong> (default: disabled): Enabling this will turn on verbose logging. This can help
-              to diagnose issues. You can open your log files via the BlueLoss system tray icon menu.</p>
-          </li>
-        </ul>
+      <h2>Security Info:</h2>
+      <p>Constantly broadcasting your device as discoverable via Bluetooth is a security issue, so I wouldn't recomment using this when you need high security.</p>
 
-        <h2>Security Info:</h2>
-        <p>BlueLoss searches for devices that are discoverable - this means that the device is currently broadcasting its Bluetooth
-          information. By default most devices don't do this all the time for security reasons.</p>
+      <h2>Support:</h2>
+      <p>Please open an issue for support here: <a href="https://github.com/Darkle/BlueLoss-Android-App/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">BlueLoss-Android-App/issues</a></p>
 
-        <p>We get around this with an app on the device that makes it always broadcast its Bluetooth details. Obviously there
-          are security issues with that, so we try to mitigate the risk by only broadcasting when you are connected to a trusted
-          wifi network. Having said that, if you are in need of something that is very secure, BlueLoss is probably not for
-          you.
-        </p>
+      <h2>Donate:</h2>
 
-        <p>Also, BlueLoss does not pair with the Bluetooth device, it only matches the Bluetooth MAC address. This means you
-          can fool BlueLoss if you spoof a device's MAC address.</p>
+      <p id="coffeeDonate"><span>Buy Me A Coffee:</span> <a href="https://www.buymeacoffee.com/2yhzJxd4B" target="_blank"><img
+            src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png?" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"></a></p>
 
-        <h2>Support:</h2>
-        <p>Please open an issue for support here: <a href="https://github.com/Darkle/BlueLoss-Desktop-App-Linux/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">BlueLoss-Desktop-App-Linux/issues</a></p>
+      <p id="bitcoinDonate"><span>Bitcoin:</span>
+        <span>Click the image below if you have a bitcoin app installed, or use it as a QR code. Or copy the address manually
+          below.
+        </span>
+      </p>
+      <a href="bitcoin:1M6FmSZUJJzj4n3qLkSh2s19dqmXeYXrFT"><img src="images/Bitcoin-QR-Code.png" alt="bitcoin donation qr code image"></a>
+      <p><code>1M6FmSZUJJzj4n3qLkSh2s19dqmXeYXrFT</code></p>
 
-        <h2>Donate:</h2>
 
-        <p id="coffeeDonate"><span>Buy Me A Coffee:</span> <a href="https://www.buymeacoffee.com/2yhzJxd4B" target="_blank"><img
-              src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png?" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"></a></p>
-
-        <p id="bitcoinDonate"><span>Bitcoin:</span>
-          <span>Click the image below if you have a bitcoin app installed, or use it as a QR code. Or copy the address manually
-            below.
-          </span>
-        </p>
-        <a href="bitcoin:1M6FmSZUJJzj4n3qLkSh2s19dqmXeYXrFT"><img src="images/Bitcoin-QR-Code.png" alt="bitcoin donation qr code image"></a>
-        <p><code>1M6FmSZUJJzj4n3qLkSh2s19dqmXeYXrFT</code></p>
-
-        <h2>Built With:</h2>
-
-        <ul>
-          <li>
-            <p><a href="http://www.lightscript.org/" rel="nofollow">LightScript</a></p>
-          </li>
-          <li>
-            <p><a href="https://electronjs.org/" rel="nofollow">Electron</a></p>
-          </li>
-          <li>
-            <p><a href="https://github.com/WebBluetoothCG/web-bluetooth">Web Bluetooth</a></p>
-          </li>
-          <li>
-            <p><a href="https://github.com/hyperapp/hyperapp">Hyperapp</a></p>
-          </li>
-          <li>
-            <p><a href="https://xel-toolkit.org/" rel="nofollow">Xel Toolkit</a></p>
-          </li>
-        </ul>
 
 
 

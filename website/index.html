@@ -23,24 +23,27 @@
     }
   </style>
 </head>
-
 <body>
-  <div id="sidebar">
-    <div id="navigation">
+  <header id="header">
+    <div id="logo">
+      <div id="headerIcon">
+        <img src="icons/BlueLoss-blue.svg" />
+      </div>
+      <div id="headerText">BlueLoss</div>
+    </div>
+  </header>
+  <div id="mainWrapper">
+    <div id="sidebar">
       <a id="homeTab" href="/">
-      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0-.17h48v48h-48z"
-          fill="none" />
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0-.17h48v48h-48z" fill="none" />
           <path d="M26 11.83l3.76 3.76-3.2 3.2 2.83 2.83 6.03-6.03-11.42-11.42h-2v10.06l4 4v-6.4zm-15.17-3.66l-2.83 2.83 13.17 13.17-11.17 11.17 2.83 2.83 9.17-9.17v15.17h2l8.59-8.59 4.59 4.59 2.82-2.83-29.17-29.17zm15.17 28.34v-7.51l3.76 3.76-3.76 3.75z"
-            />
+          />
         </svg>
         <div class="tabText">Home</div>
       </a>
       <a id="windowsTab" href="blueloss-windows-desktop-app.html">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          xml:space="preserve" version="1.1"
-          style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
           viewBox="0 0 180 225" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd">
           <defs>
           </defs>
@@ -68,16 +71,6 @@
         <div class="tabText">Android App</div>
       </a>
     </div>
-  </div>
-  <div id="mainWrapper">
-    <header id="header">
-      <div id="logo">
-        <div id="headerIcon">
-          <img src="icons/BlueLoss-blue.svg" />
-        </div>
-        <div id="headerText">BlueLoss</div>
-      </div>
-    </header>
     <main>
       <p>Blueloss is a desktop application that locks you computer when a bluetooth device is no longer present.</p>
       <p>There is a desktop application for Linux and one for Windows.</p>

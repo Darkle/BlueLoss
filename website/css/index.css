@@ -13,87 +13,8 @@ body {
   display: flex;
   background-color: #F9F9F9;
   font-family: 'Open Sans';
-  outline: 1px solid green;
-}
-
-#sidebar {
-  display: flex;
-  height: 100%;
   flex-direction: column;
-  width: 200px;
-  flex-shrink: 0;
-  border-right: 1px solid #757575;
-}
-
-#sidebar a {
-  display: flex;
-  text-decoration: none;
-  color:#757575;
-  font-size: 1.2em;
-  padding: 20px;
-  align-items: center;
-}
-
-#sidebar a:not(:first-child) {
-  border-bottom: 1px solid #757575;
-}
-
-#sidebar a:hover .tabText {
-  color:#1B5299;
-}
-
-#sidebar a:hover svg {
-  fill:#1B5299;
-}
-
-#sidebar svg {
-  height: 40px;
-  fill:#757575;
-}
-
-#navigation {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-#sidebarBottomSpacer{
-  height: 100%;
-  flex-grow: 1;
-}
-
-#homeTab {
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-  border-bottom: 2px solid #1B5299;
-  background-color: #FFFFFF;
-  height: 64px;
-}
-
-#homeTab svg {
-  height: 32px;
-  /* margin-right: 4px; */
-  /* margin-left: 2px; */
-  /* fill:#1B5299; */
-}
-
-#windowsTab svg {
-  height: 44px;
-  margin-right: 4px;
-  margin-left: 2px;
-}
-
-#androidTab svg {
-  height: 30px;
-}
-
-#sidebar .tabText {
-  margin-left: 10px;
-}
-
-#mainWrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
 }
 
 #header {
@@ -105,6 +26,7 @@ body {
   border-bottom: 2px solid #1B5299;
   background-color: #FFFFFF;
   flex-shrink: 0;
+  width: 100vw;
 }
 
 #logo {
@@ -133,6 +55,76 @@ body {
   color: #1B5299;
 }
 
+#sidebar {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 200px;
+  border-right: 2px solid #757575;
+  flex-shrink: 0;
+  margin-top: -64px;
+}
+
+#sidebar a {
+  display: flex;
+  text-decoration: none;
+  color:#757575;
+  font-size: 1.2em;
+  padding: 20px;
+  align-items: center;
+}
+
+#sidebar a:not(:first-child) {
+  border-bottom: 2px solid #757575;
+}
+
+#sidebar a:hover .tabText {
+  color:#1B5299;
+}
+
+#sidebar a:hover svg {
+  fill:#1B5299;
+}
+
+#sidebar svg {
+  height: 40px;
+  fill:#757575;
+}
+
+#homeTab {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+  border-bottom: 1px solid #1B5299;
+  background-color: #FFFFFF;
+  height: 65px;
+  margin-top:-2px;
+}
+
+#homeTab svg {
+  height: 32px;
+}
+
+#windowsTab svg {
+  height: 44px;
+  margin-right: 4px;
+  margin-left: 2px;
+}
+
+#androidTab svg {
+  height: 30px;
+}
+
+#sidebar .tabText {
+  margin-left: 10px;
+}
+
+#mainWrapper {
+  display: flex;
+}
+
+main {
+  width: 100vw;
+}
+
 main > * {
   max-width: 600px;
   margin: 25px auto;
@@ -144,10 +136,18 @@ main h1, main h2, main h3{
   color: #414141;
 }
 
-main p {
+main p, main li {
   color: rgba(0, 0, 0, 0.8);
-  font-size:1.1em;
+}
+
+main p {
+  font-size:1.2em;
   line-height: 1.5em;
+
+}
+
+main li {
+  font-size:1.1em;
 }
 
 main a {
@@ -169,6 +169,10 @@ main ul {
 main ul li p {
   margin-top: 6px;
   margin-bottom: 6px;
+  font-size:1.08em;
+}
+main > ul > li > ul > li > ul > li > p{
+  font-size:0.9em;
 }
 
 main ul li ul li {
@@ -194,6 +198,10 @@ main a + p {
 
 main p + a {
   margin-top: 4px;
+}
+
+.androidScreenshots {
+  border: 1px solid #757575;
 }
 
 #coffeeDonate span{
