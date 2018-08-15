@@ -143,7 +143,6 @@ main p, main li {
 main p {
   font-size:1.2em;
   line-height: 1.5em;
-
 }
 
 main li {
@@ -198,6 +197,11 @@ main a + p {
 
 main p + a {
   margin-top: 4px;
+}
+
+.advancedInstallList ul li{
+  list-style-type: decimal;
+  font-size: 1em;
 }
 
 .androidScreenshots {
