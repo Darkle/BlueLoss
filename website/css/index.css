@@ -20,11 +20,11 @@ body {
 img{
   width: 100%;
   height: auto;
+  display: block;
 }
 
 #header {
   height: 64px;
-  font-family: 'Lato';
   font-size: 28px;
   display: flex;
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
@@ -36,7 +36,7 @@ img{
 
 #logo {
   display: flex;
-  flex-grow: 1.22;
+  flex-grow: 3;
   justify-content: center;
 }
 
@@ -44,13 +44,10 @@ img{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-right: 2px;
 }
 
 #headerIcon > img {
-  padding-top: 4px;
   height: 40px;
-  padding-right: 13px;
  }
 
 #headerText {
@@ -58,6 +55,7 @@ img{
   justify-content: center;
   flex-direction: column;
   color: #1B5299;
+  font-size: 1.1em;
 }
 
 #sidebar {
@@ -128,12 +126,19 @@ img{
 
 main {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
 }
 
 main > * {
   max-width: 600px;
-  margin: 25px auto;
-  display: block;
+  margin-top: 25px;
+  width: 100%;
+}
+
+main > p, main h1 {
   margin-top: 50px;
 }
 
@@ -160,10 +165,6 @@ main a {
 
 main a:hover {
   text-decoration: underline;
-}
-
-#installationHeader{
-  margin-top: 40px;
 }
 
 main ul {
@@ -235,6 +236,10 @@ main p + a {
   font-size: 0.8em;
 }
 
+#bitcoinDonate + a{
+  display: block;
+}
+
 #qrCodeImage{
   max-width: 140px;
 }
@@ -242,3 +247,58 @@ main p + a {
 main > *:last-child {
   margin-bottom: 100px;
 }
+
+#mobileSidebar{
+  display:none;
+  border-bottom: 2px solid #757575;
+  margin:0;
+  justify-content: space-evenly;
+  height: 46px;
+  overflow: hidden;
+}
+
+#mobileSidebar a {
+  display: flex;
+  text-decoration: none;
+  color:#757575;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#mobileSidebar a:not(:last-child) {
+  border-right: 2px solid #757575;
+}
+
+#mobileSidebar a:hover svg {
+  fill:#1B5299;
+}
+
+#mobileSidebar svg {
+  height: 40px;
+  fill:#757575;
+}
+
+#mobileHomeTab svg {
+  height: 36px;
+}
+
+#mobileWindowsTab svg {
+  height: 36px;
+  margin-top: 6px;
+}
+
+#mobileAndroidTab svg {
+  height: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  #mobileSidebar{
+    display:flex;
+  }
+  #sidebar{
+    display:none;
+  }
+}
+
+
