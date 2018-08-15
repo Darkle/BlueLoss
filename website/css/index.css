@@ -165,6 +165,7 @@ main li {
 
 main a {
   text-decoration: none;
+  color: #1B5299;
 }
 
 main a:hover {
