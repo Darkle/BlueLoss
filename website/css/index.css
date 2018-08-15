@@ -17,6 +17,11 @@ body {
   overflow-x: hidden;
 }
 
+img{
+  width: 100%;
+  height: auto;
+}
+
 #header {
   height: 64px;
   font-family: 'Lato';
@@ -228,6 +233,10 @@ main p + a {
 
 #bitcoinDonate span:nth-child(2){
   font-size: 0.8em;
+}
+
+#qrCodeImage{
+  max-width: 140px;
 }
 
 main > *:last-child {
