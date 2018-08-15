@@ -199,6 +199,14 @@ main p + a {
   margin-top: 4px;
 }
 
+#linuxRequirementsList ul li{
+  margin-top: 8px;
+}
+
+#androidInstallationList li{
+  margin-top: 8px;
+}
+
 .advancedInstallList ul li{
   list-style-type: decimal;
   font-size: 1em;
