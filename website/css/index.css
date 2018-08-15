@@ -82,6 +82,7 @@ a{
   font-size: 1.2em;
   padding: 20px;
   align-items: center;
+  word-break: normal;
 }
 
 #sidebar a:not(:first-child) {
